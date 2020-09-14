@@ -1,0 +1,19 @@
+<div *ngIf="enrollee">
+    <div>
+        <label>Name: </label> {{enrollee.name}}
+    </div>
+      <div>
+        <label>Active: </label> {{enrollee.activeStatus}}
+    </div>
+    <div>
+        <label>Date of Birth: </label> {{enrollee.dob}}
+    </div>
+
+    <span  *ngIf='enrollee.activeStatus' (click)='updateActive(false)'>Inactive</span>
+
+    <span  *ngIf='!enrollee.activeStatus' (click)='updateActive(true)'>Active</span>
+
+
+    <hr/>
+</div>
+
